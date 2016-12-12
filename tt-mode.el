@@ -32,7 +32,7 @@
    ;; Comments
    '("\\(#\\(?:N\\(?:OP\\|op\\|[Oo]\\)\\|nop?\\) *\\({.+}\\|.+\\)\;?\\)" . font-lock-comment-face)
    ;; Variable names
-   '("\\([$%&]\\{1,2\\}[a-zA-Z_][a-zA-Z0-9_]*\\)" . font-lock-variable-name-face)
+   '("\\([$%&]\\{1,2\\}[a-zA-Z_0-9][a-zA-Z0-9_]*\\)" . font-lock-variable-name-face)
    ;; Variable definitions
    '("\\(?:#[Vv]\\(?:[Aa]\\|[Aa][Rr]\\|[Aa][Rr][Ii]\\|[Aa][Rr][Ii][Aa]\\|[Aa][Rr][Ii][Aa][Bb]\\|[Aa][Rr][Ii][Aa][Bb][Ll]\\|[Aa][Rr][Ii][Aa][Bb][Ll][Ee]\\)?\\) +\\([a-zA-Z_][a-zA-Z0-9_]*\\|{[a-zA-Z_][a-zA-Z0-9_ ]*}\\)\\(?: [\t\n ]\\| \\)\\([ \t]*{.+}\\|.+\\)"
      (1 font-lock-variable-name-face)
@@ -40,11 +40,12 @@
    ;; User function names
    '("\\(@[a-zA-Z_][a-zA-Z0-9_]*\\)" . font-lock-function-name-face)
    ;; Function definitions
-   '("#[Ff][Uu]\\(?:[Nn]\\|[Nn][Cc]\\|[Nn][Cc][Tt]\\|[Nn][Cc][Tt][Ii]\\|[Nn][Cc][Tt][Ii][Oo]\\|[Nn][Cc][Tt][Ii][Oo][Nn]\\)?[ \t\n]*\\([a-zA-Z_][a-zA-Z0-9_]*\\|{[ \t\n]*[a-zA-Z_][a-zA-Z0-9_][ \t\n]}\\)\\([ \t\n]\\| .?\\)" . font-lock-function-name-face)
+   '("#[Ff][Uu]\\(?:[Nn]\\|[Nn][Cc]\\|[Nn][Cc][Tt]\\|[Nn][Cc][Tt][Ii]\\|[Nn][Cc][Tt][Ii][Oo]\\|[Nn][Cc][Tt][Ii][Oo][Nn]\\)?[ \t\n]+\\([a-zA-Z_][a-zA-Z0-9_]*\\|{[a-zA-Z_][a-zA-Z0-9_]*}\\)\\([ \t\n]\\| .?\\)"
+     (1 font-lock-function-name-face))
    ;; Conditionals
    '("#\\([Ii][Ff]\\|[Ee][Ll][Ss][Ee]\\([Ii][Ff]\\)?\\|[Ss][Ww][Ii][Tt][Cc][Hh]\\|[Cc][Aa][Ss][Ee]\\)" . font-lock-keyword-face)
    ;; Commands
-   '("\\(#[a-zA-Z]+\\)" . font-lock-function-name-face)
+   '("\\(#[a-zA-Z]+\\)" . font-lock-keyword-face)
    ;; Color expressions
    '("\\(<\\([0-9]\\{3\\}\\|[a-fA-F]\\{3\\}\\|[gG][0-9]\\{2\\}\\)>\\)" . font-lock-comment-face)
    ;; Escape codes
