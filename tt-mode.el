@@ -1,4 +1,4 @@
-;;; tt-mode.el --- A major mode for tintin files.
+;;; tt-mode.el --- Syntax highlighting for tintin files.
 
 ;; Author: Alyssa Alvarez <alyscole@yandex.com>
 ;; Maintainer: Alyssa Alvarez <alyscole@yandex.com>
