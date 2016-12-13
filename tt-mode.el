@@ -32,7 +32,7 @@
    ;; Comments
    '("\\(#\\(?:N\\(?:OP\\|op\\|[Oo]\\)\\|nop?\\) *\\({.+}\\|.+\\)\;?\\)" . font-lock-comment-face)
    ;; Variable names
-   '("\\([$%&]\\{1,2\\}[a-zA-Z_0-9][a-zA-Z0-9_]*\\)" . font-lock-variable-name-face)
+   '("\\([$%&]\\{1,2\\}[a-zA-Z_0-9?\.+*][a-zA-Z0-9_]*\\)" . font-lock-variable-name-face)
    ;; Variable definitions
    '("\\(?:#[Vv]\\(?:[Aa]\\|[Aa][Rr]\\|[Aa][Rr][Ii]\\|[Aa][Rr][Ii][Aa]\\|[Aa][Rr][Ii][Aa][Bb]\\|[Aa][Rr][Ii][Aa][Bb][Ll]\\|[Aa][Rr][Ii][Aa][Bb][Ll][Ee]\\)?\\) +\\([a-zA-Z_][a-zA-Z0-9_]*\\|{[a-zA-Z_][a-zA-Z0-9_ ]*}\\)\\(?: [\t\n ]\\| \\)\\([ \t]*{.+}\\|.+\\)"
      (1 font-lock-variable-name-face)
