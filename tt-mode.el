@@ -66,7 +66,7 @@
       ;; Check if at the end of a block
       (if (looking-at "^[ \t]*};?")
           (progn
-            (save-mark-and-excursion
+            (save-excursion
              ;; Set indentation to previous line's minus tab-width
               (forward-line -1)
               (setq cur-indent (- (current-indentation) tab-width))
